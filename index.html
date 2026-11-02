@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>EOUS | Educational Opportunities for Underprivileged Students</title>
+
+  <meta name="description" content="EOUS expands educational opportunities for underprivileged students through academic support, mentorship, and community initiatives.">
+  <meta name="theme-color" content="#f8f5ed">
+
+  <link rel="canonical" href="https://eous-edu.github.io/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #f8f5ed;
+      --green: #214634;
+      --text: #2c302b;
+      --muted: #64675f;
+      --line: #d7d0c2;
+      --pink: #eaa6b4;
+      --sage: #b3d2a6;
+      --yellow: #f1d278;
+      --blue: #a9cddd;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 105px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: "Patrick Hand", cursive;
+      font-size: 20px;
+      line-height: 1.65;
+
+      /* Your saved handmade-paper texture */
+      background-color: var(--paper);
+      background-image: url("./paper-texture.jpg");
+      background-repeat: repeat;
+      background-position: top left;
+      background-size: 850px auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 5px;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(248, 245, 237, 0.95);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-family: "Kalam", cursive;
+      font-size: 37px;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--green);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 34px;
+      align-items: center;
+      font-family: "Patrick Hand", cursive;
+      font-size: 20px;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+      text-decoration-style: wavy;
+      text-decoration-color: #b1cda7;
+      text-underline-offset: 7px;
+    }
+
+    /* TYPOGRAPHY */
+
+    h1, h2, h3 {
+      font-family: "Kalam", cursive;
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: clamp(42px, 5.2vw, 69px);
+      letter-spacing: -1.2px;
+      margin: 20px 0 22px;
+    }
+
+    h2 {
+      font-size: clamp(34px, 4vw, 49px);
+      margin: 15px 0 23px;
+    }
+
+    h3 {
+      font-size: 27px;
+      margin: 20px 0 10px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .eyebrow {
+      font-family: "Kalam", cursive;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: var(--green);
+    }
+
+    /* TRANSLUCENT WAVY HIGHLIGHTS */
+
+    .highlight {
+      display: inline;
+      padding: 0 0.12em;
+      margin: 0 -0.06em;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+    }
+
+    .highlight.pink {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 110' preserveAspectRatio='none'%3E%3Cpath d='M0 46 C45 32 85 52 132 40 S220 45 270 37 S355 50 405 39 S515 43 600 37 L600 88 C545 97 505 78 455 91 S360 80 310 91 S220 81 165 91 S65 82 0 93 Z' fill='%23eaa6b4' fill-opacity='.47'/%3E%3C/svg%3E");
+    }
+
+    .highlight.sage {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 110' preserveAspectRatio='none'%3E%3Cpath d='M0 42 C60 34 100 49 150 39 S240 47 290 37 S390 48 445 38 S530 45 600 39 L600 90 C540 81 500 96 445 87 S355 97 300 87 S200 95 150 85 S60 97 0 89 Z' fill='%23b3d2a6' fill-opacity='.55'/%3E%3C/svg%3E");
+    }
+
+    .highlight.yellow {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 110' preserveAspectRatio='none'%3E%3Cpath d='M0 45 C55 35 95 49 145 40 S235 47 285 38 S385 47 435 39 S535 48 600 39 L600 90 C550 98 510 82 455 92 S360 81 310 92 S220 82 165 92 S60 81 0 91 Z' fill='%23f1d278' fill-opacity='.48'/%3E%3C/svg%3E");
+    }
+
+    .highlight.blue {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 110' preserveAspectRatio='none'%3E%3Cpath d='M0 42 C50 34 100 48 155 39 S245 47 300 38 S390 49 445 39 S540 45 600 38 L600 89 C540 97 500 82 450 92 S350 81 300 91 S200 83 150 93 S50 82 0 90 Z' fill='%23a9cddd' fill-opacity='.5'/%3E%3C/svg%3E");
+    }
+
+    .label-highlight {
+      display: inline-block;
+      padding: 2px 12px 0;
+      border-radius: 34% 8% 26% 6% / 22% 30% 18% 25%;
+      transform: rotate(-0.8deg);
+    }
+
+    .label-highlight.sage {
+      background: rgba(179, 210, 166, 0.38);
+    }
+
+    .label-highlight.pink {
+      background: rgba(234, 166, 180, 0.34);
+    }
+
+    .label-highlight.yellow {
+      background: rgba(241, 210, 120, 0.35);
+    }
+
+    .label-highlight.blue {
+      background: rgba(169, 205, 221, 0.4);
+    }
+
+    /* HERO */
+
+    .hero {
+      max-width: 960px;
+      padding: 105px 0 100px;
+    }
+
+    .hero p {
+      max-width: 590px;
+      font-size: 23px;
+      line-height: 1.6;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: var(--green);
+      color: #fff;
+      font-family: "Patrick Hand", cursive;
+      font-size: 20px;
+      border-radius: 5px;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .button:hover {
+      background: #38634a;
+      transform: translateY(-2px);
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-line {
+      border-top: 1px solid var(--line);
+    }
+
+    /* ABOUT */
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+    }
+
+    .mission-text {
+      border-left: 1px solid var(--line);
+      padding-left: 55px;
+    }
+
+    .mission-text p {
+      font-size: 23px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    /* OUR WORK */
+
+    .section-intro {
+      max-width: 700px;
+      font-size: 22px;
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    .card {
+      min-height: 245px;
+      padding: 30px 27px;
+      background: rgba(255, 253, 247, 0.48);
+      border: 1px solid #d8d1c4;
+      border-radius: 6px;
+      box-shadow: 2px 4px 0 rgba(93, 78, 54, 0.055);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px) rotate(-0.3deg);
+      box-shadow: 3px 7px 0 rgba(93, 78, 54, 0.07);
+    }
+
+    .card-number {
+      font-family: "Kalam", cursive;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .card p {
+      font-size: 21px;
+      line-height: 1.55;
+      color: #505650;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      padding: 95px 0 90px;
+    }
+
+    .contact p {
+      max-width: 780px;
+      font-size: 22px;
+    }
+
+    .coming-soon {
+      font-family: "Kalam", cursive;
+      font-size: 20px !important;
+      color: var(--muted);
+      margin-top: 18px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 26px 0;
+      font-family: "Patrick Hand", cursive;
+      font-size: 17px;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 760px) {
+      .logo {
+        font-size: 32px;
+      }
+
+      .nav-links {
+        gap: 15px;
+        font-size: 18px;
+      }
+
+      .hero {
+        padding: 75px 0;
+      }
+
+      .mission-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .mission-text {
+        border-left: none;
+        padding-left: 0;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+    }
+
+    @media (max-width: 420px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 0;
+        gap: 12px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      .card {
+        min-height: auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .button,
+      .card {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header>
+    <nav class="container" aria-label="Main navigation">
+      <a href="#home" class="logo">EOUS</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#initiatives">Our Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <div class="container">
+      <div class="hero" id="home">
+
+        <div class="eyebrow">
+          <span class="label-highlight sage">
+            Educational Opportunities for Underprivileged Students
+          </span>
+        </div>
+
+        <h1>
+          Education opens doors.<br>
+          <span class="highlight pink">Opportunity changes lives.</span>
+        </h1>
+
+        <p>
+          Working to make education more accessible through
+          academic support, mentorship, and community-driven
+          initiatives.
+        </p>
+
+        <a href="#initiatives" class="button">
+          Explore Our Work &rarr;
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="section-line">
+      <div class="container mission-grid">
+
+        <div>
+          <div class="eyebrow">
+            <span class="label-highlight yellow">Who We Are</span>
+          </div>
+
+          <h2>
+            Making opportunity<br>
+            <span class="highlight sage">accessible.</span>
+          </h2>
+        </div>
+
+        <div class="mission-text">
+          <p>
+            Educational Opportunities for Underprivileged Students
+            (EOUS) is an educational initiative focused on helping
+            underserved students access learning opportunities,
+            guidance, and support.
+          </p>
+
+          <p>
+            We believe a student's circumstances should never
+            determine the limits of their potential.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OUR WORK -->
+
+    <section id="initiatives" class="section-line">
+      <div class="container">
+
+        <div class="eyebrow">
+          <span class="label-highlight pink">What We Do</span>
+        </div>
+
+        <h2>
+          Our areas of <span class="highlight yellow">focus.</span>
+        </h2>
+
+        <p class="section-intro">
+          Supporting students and communities through meaningful,
+          accessible educational initiatives.
+        </p>
+
+        <div class="cards">
+
+          <article class="card">
+            <div class="card-number">
+              <span class="label-highlight sage">01 / Education</span>
+            </div>
+
+            <h3>Academic Support</h3>
+
+            <p>
+              Helping students strengthen their learning
+              through educational resources and guidance.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">
+              <span class="label-highlight pink">02 / Mentorship</span>
+            </div>
+
+            <h3>Student Mentorship</h3>
+
+            <p>
+              Encouraging students to pursue their goals
+              with confidence and support.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">
+              <span class="label-highlight blue">03 / Community</span>
+            </div>
+
+            <h3>Community Outreach</h3>
+
+            <p>
+              Building connections and supporting
+              communities through collaborative initiatives.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="section-line contact">
+      <div class="container">
+
+        <div class="eyebrow">
+          <span class="label-highlight sage">Connect With Us</span>
+        </div>
+
+        <h2>
+          Be part of the <span class="highlight pink">opportunity.</span>
+        </h2>
+
+        <p>
+          Interested in learning more about EOUS,
+          supporting our work, or exploring ways
+          to get involved?
+        </p>
+
+        <p class="coming-soon">
+          Contact information coming soon.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container footer-inner">
+      <span>&copy; 2019 EOUS. All rights reserved.</span>
+      <span>Educational Opportunities for Underprivileged Students</span>
+    </div>
+  </footer>
+
+</body>
+</html>
