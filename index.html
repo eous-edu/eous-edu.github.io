@@ -8,17 +8,13 @@
   <title>EOUS | Educational Opportunities for Underprivileged Students</title>
 
   <meta name="description" content="EOUS expands educational opportunities for underprivileged students through academic support, mentorship, and community initiatives.">
-
   <meta name="theme-color" content="#f8f5ed">
-
   <link rel="canonical" href="https://eous-edu.github.io/">
 
-  <!-- HANDWRITTEN EOUS FAVICON -->
+  <!-- Handwritten EOUS favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='20' fill='%23f8f5ed'/%3E%3Cg fill='%23214634' font-family='Comic Sans MS,Segoe Print,cursive' font-size='35' font-weight='bold'%3E%3Ctext x='17' y='73' transform='rotate(-8 29 58)'%3EE%3C/text%3E%3Ctext x='40' y='70' transform='rotate(5 52 55)'%3EO%3C/text%3E%3Ctext x='63' y='74' transform='rotate(-4 75 59)'%3EU%3C/text%3E%3Ctext x='85' y='71' transform='rotate(7 97 56)'%3ES%3C/text%3E%3C/g%3E%3C/svg%3E">
 
-<!-- EOUS handwritten favicon -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='20' fill='%23f8f5ed'/%3E%3Cg fill='%23214634' font-family='Comic Sans MS,Segoe Print,cursive' font-size='35' font-weight='bold'%3E%3Ctext x='17' y='73' transform='rotate(-8 29 58)'%3EE%3C/text%3E%3Ctext x='40' y='70' transform='rotate(5 52 55)'%3EO%3C/text%3E%3Ctext x='63' y='74' transform='rotate(-4 75 59)'%3EU%3C/text%3E%3Ctext x='85' y='71' transform='rotate(7 97 56)'%3ES%3C/text%3E%3C/g%3E%3C/svg%3E">
-
-  <!-- GOOGLE SITE NAME -->
+  <!-- Google site name -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,10 +25,9 @@
   }
   </script>
 
-  <!-- HANDWRITING FONTS -->
+  <!-- Handwriting fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
 
   <style>
@@ -63,13 +58,26 @@
       font-family: "Patrick Hand", cursive;
       font-size: 20px;
       line-height: 1.65;
-
-      /* HANDMADE PAPER BACKGROUND */
       background-color: var(--paper);
       background-image: url("./paper-texture.jpg");
       background-repeat: repeat;
       background-position: top left;
       background-size: 850px auto;
+    }
+
+    /* =====================================
+       EOUS CUSTOM PENCIL CURSOR
+       ===================================== */
+
+    /* Normal: forest-green pencil */
+    html, body, body * {
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M3 29 L9 17 L23 3 Q25 1 27 3 L29 5 Q31 7 29 9 L15 23 Z' fill='%23214634' stroke='%231a3929' stroke-width='1' stroke-linejoin='round'/%3E%3Cpath d='M3 29 L9 17 L15 23 Z' fill='%23e8c99d' stroke='%23876a48' stroke-width='.8' stroke-linejoin='round'/%3E%3Cpath d='M3 29 L5.8 23.4 L8.6 26.2 Z' fill='%233b3835'/%3E%3Cpath d='M12 20 L26 6' stroke='%236b9b79' stroke-width='2'/%3E%3Cpath d='M23 3 Q25 1 27 3 L29 5 Q31 7 29 9 L26 12 L20 6 Z' fill='%23eaa6b4' stroke='%231a3929' stroke-width='1'/%3E%3Cpath d='M20 6 L26 12' stroke='%23c6a46e' stroke-width='2'/%3E%3C/svg%3E") 3 29, auto;
+    }
+
+    /* Hover: pink pencil with sparkle */
+    a, button, .button, [role="button"],
+    a *, button *, .button *, [role="button"] * {
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M3 29 L9 17 L23 3 Q25 1 27 3 L29 5 Q31 7 29 9 L15 23 Z' fill='%23eaa6b4' stroke='%23214634' stroke-width='1' stroke-linejoin='round'/%3E%3Cpath d='M3 29 L9 17 L15 23 Z' fill='%23e8c99d' stroke='%23876a48' stroke-width='.8' stroke-linejoin='round'/%3E%3Cpath d='M3 29 L5.8 23.4 L8.6 26.2 Z' fill='%233b3835'/%3E%3Cpath d='M12 20 L26 6' stroke='%23f8d4dc' stroke-width='2'/%3E%3Cpath d='M23 3 Q25 1 27 3 L29 5 Q31 7 29 9 L26 12 L20 6 Z' fill='%23214634' stroke='%231a3929' stroke-width='1'/%3E%3Cpath d='M20 6 L26 12' stroke='%23c6a46e' stroke-width='2'/%3E%3Cpath d='M5 3 L6.3 6.7 L10 8 L6.3 9.3 L5 13 L3.7 9.3 L0 8 L3.7 6.7 Z' fill='%23eaa6b4'/%3E%3C/svg%3E") 3 29, pointer;
     }
 
     a {
@@ -165,7 +173,7 @@
       color: var(--green);
     }
 
-    /* WAVY PASTEL HIGHLIGHTS */
+    /* PASTEL WAVY HIGHLIGHTS */
 
     .highlight {
       display: inline;
@@ -414,8 +422,7 @@
         scroll-behavior: auto;
       }
 
-      .button,
-      .card {
+      .button, .card {
         transition: none;
       }
     }
@@ -425,7 +432,6 @@
 <body>
 
   <!-- NAVIGATION -->
-
   <header>
     <nav class="container" aria-label="Main navigation">
 
@@ -443,7 +449,6 @@
   <main>
 
     <!-- HERO -->
-
     <div class="container">
       <div class="hero" id="home">
 
@@ -474,13 +479,11 @@
     </div>
 
     <!-- ABOUT -->
-
     <section id="about" class="section-line">
 
       <div class="container mission-grid">
 
         <div>
-
           <div class="eyebrow">
             <span class="label-highlight yellow">
               Who We Are
@@ -493,7 +496,6 @@
               accessible.
             </span>
           </h2>
-
         </div>
 
         <div class="mission-text">
@@ -511,13 +513,10 @@
           </p>
 
         </div>
-
       </div>
-
     </section>
 
     <!-- OUR WORK -->
-
     <section id="initiatives" class="section-line">
 
       <div class="container">
@@ -592,13 +591,10 @@
           </article>
 
         </div>
-
       </div>
-
     </section>
 
     <!-- CONTACT -->
-
     <section id="contact" class="section-line contact">
 
       <div class="container">
@@ -625,15 +621,12 @@
         </p>
 
       </div>
-
     </section>
 
   </main>
 
   <!-- FOOTER -->
-
   <footer>
-
     <div class="container footer-inner">
 
       <span>
@@ -645,7 +638,6 @@
       </span>
 
     </div>
-
   </footer>
 
 </body>
